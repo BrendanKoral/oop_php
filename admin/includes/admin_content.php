@@ -10,17 +10,7 @@
 
         <?php
 
-        $custom_query = "SELECT * FROM users";
-
-        $result = $database->query($custom_query);
-
-        $user_found = mysqli_fetch_array($result);
-
-        echo $user_found['username'];
-
-        $user = new User();
-
-        $result_set = $user->find_all_users();
+        $result_set = User::find_all_users();
 
         while ( $row = mysqli_fetch_array($result_set) ) {
 

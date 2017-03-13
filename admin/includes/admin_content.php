@@ -10,17 +10,11 @@
 
         <?php
 
-        $found_user = User::find_user_by_id(2);
+        $found_user = User::find_user_by_id(1);
 
-        $user = new User();
+        $user = User::instantiation($found_user);
 
-        $user->id = $found_user['id'];
-        $user->first_name = $found_user['first_name'];
-        $user->last_name = $found_user['last_name'];
-        $user->password = $found_user['password'];
-        $user->username = $found_user['username'];
-
-        echo $user->id;
+        echo $user->username;
 
         ?>
 

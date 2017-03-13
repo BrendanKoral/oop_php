@@ -10,13 +10,11 @@
 
         <?php
 
-        $result_set = User::find_all_users();
+        $user = new User();
 
-        while ( $row = mysqli_fetch_array($result_set) ) {
+        $found_user = User::find_user_by_id(2);
 
-            echo $row['username'] . "<br>";
-
-        }
+        var_dump($found_user);
 
 
         ?>
